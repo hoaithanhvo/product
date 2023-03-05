@@ -10,6 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Index.module.scss";
 import App from "../components/Slider1/App";
+import App1 from "../components/Slider2/App";
 import Slider from "../components/slider";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -142,9 +143,9 @@ export default function Home() {
         alt=""
       />
 
-      {/* <div className={styles.slider2}>
+      <div className={styles.slider2}>
         <App1 />
-      </div> */}
+      </div>
 
       <div className={styles.product}>
         <div className={styles.button}>

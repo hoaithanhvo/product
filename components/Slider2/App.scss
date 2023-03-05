@@ -1,0 +1,111 @@
+body {
+  background: #d64e4e;
+  z-index: 100;
+}
+.App {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 30px;
+  color: #000;
+  content: "❮";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+.slick-dots {
+  display: none;
+}
+
+.card {
+  border: 1px solid #fff;
+  background: black;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+    height: 400px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+    .card-top h1 {
+      font-size: 0.9rem;
+      margin: 20px;
+    }
+
+    .App-header {
+      background-color: #282c34;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      color: white;
+
+      .card-top {
+        .img {
+          width: 50px;
+        }
+      }
+
+      .App-link {
+        color: #61dafb;
+        .card-bottom {
+          margin: 10px 20px;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        @keyframes App-logo-spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .category {
+          // position: relative;
+          text-align: center;
+        }
+        .category::before {
+          content: "";
+          position: absolute;
+          top: calc(100% + 10px);
+          left: 0;
+          right: 0;
+          height: 2px;
+        }
+      }
+    }
+  }
+}

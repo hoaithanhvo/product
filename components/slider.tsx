@@ -4,7 +4,7 @@ function slider() {
   return (
     <div>
       slider
-      <h1> thanh23336</h1>
+      <h1>võ hoài thanh 132</h1>
     </div>
   );
 }
