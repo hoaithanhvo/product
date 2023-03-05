@@ -9,7 +9,7 @@ import {
 // import App1 from "component/Slider2/App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Index.module.scss";
-// import App from "/TGDĐ/web_tgdd/component/Specilty";
+import App from "../components/Slider1/App";
 import Slider from "../components/slider";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,9 +25,9 @@ export default function Home() {
     //         />
     <div className={styles.main}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {/* <div className={styles.slider}>
+      <div className={styles.slider}>
         <App />
-      </div> */}
+      </div>
       <div></div>
 
       <div className={styles.header}>
