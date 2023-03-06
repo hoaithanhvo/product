@@ -1,4 +1,5 @@
 import Image from "next/image";
+// import Slider from "react-slick";
 import { Inter } from "next/font/google";
 import {
   faUser,
@@ -10,9 +11,9 @@ import {
 // import App1 from "component/Slider2/App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Index.module.scss";
-import App from "../components/Slider1/App";
-// import App1 from "../components/Slider2/App";
-import MySlider from "../components/slider";
+// import App from "../components";
+// import App1 from "../co";
+import Slider from "../components/SliderPicture/slider";
 import SliderText from "../components/SliderText/sliderText";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +29,9 @@ export default function Home() {
     //         />
     <div className={styles.main}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <div className={styles.slider}>
+      {/* <div className={styles.slider}>
         <App />
-      </div>
+      </div> */}
       <div></div>
 
       <div className={styles.header}>
@@ -271,10 +272,10 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.slider}>
-        <MySlider />
+        <Slider />
       </div>
       <div style={{ height: "300px" }}></div>
-      <div>
+      <div style={{ height: "300px" }}>
         <SliderText />
       </div>
     </div>
