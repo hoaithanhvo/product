@@ -9,7 +9,7 @@ function sliderText() {
         Tôi là{" "}
         <Typical
           loop={Infinity}
-          steps={["developer", 1000, "designer", 1000, "Youtube", 1000]}
+          steps={["developer", 1500, "designer", 1500, "Youtube", 2000]}
           wrapper="b"
         />
       </p>

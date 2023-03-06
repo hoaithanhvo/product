@@ -15,6 +15,7 @@ import styles from "./Index.module.scss";
 // import App1 from "../co";
 import MySlider from "../components/SliderPicture/slider";
 import Slider2 from "../components/SliderText/sliderText";
+import Slider3 from "../components/sliderSwiper/slider";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -32,6 +33,10 @@ export default function Home() {
       <div>
         <Slider2 />
       </div>
+      <div>
+        <Slider3 />
+      </div>
+
       {/* <div className={styles.slider}>
 
         <App />
