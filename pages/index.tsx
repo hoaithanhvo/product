@@ -14,7 +14,7 @@ import styles from "./Index.module.scss";
 // import App from "../components";
 // import App1 from "../co";
 import MySlider from "../components/SliderPicture/slider";
-import SliderText from "../components/SliderText/sliderText";
+import Slider2 from "../components/SliderText/sliderText";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -29,7 +29,11 @@ export default function Home() {
     //         />
     <div className={styles.main}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <div>
+        <Slider2 />
+      </div>
       {/* <div className={styles.slider}>
+
         <App />
       </div> */}
       <div></div>
@@ -277,9 +281,7 @@ export default function Home() {
       <div style={{ height: "300px" }}>
         <h1>deploy thành công lan2 </h1>
       </div>
-      <div style={{ height: "300px" }}>
-        <SliderText />
-      </div>
+      <div style={{ height: "300px" }}>{/* <SliderText /> */}</div>
     </div>
   );
 }
