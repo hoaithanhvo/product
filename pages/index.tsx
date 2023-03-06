@@ -14,7 +14,7 @@ import styles from "./Index.module.scss";
 // import App from "../components";
 // import App1 from "../co";
 import MySlider from "../components/SliderPicture/slider";
-// import SliderText from "../components/SliderText/sliderText";
+import SliderText from "../components/SliderText/sliderText";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -277,9 +277,9 @@ export default function Home() {
       <div style={{ height: "300px" }}>
         <h1>deploy thành công </h1>
       </div>
-      {/* <div style={{ height: "300px" }}>
+      <div style={{ height: "300px" }}>
         <SliderText />
-      </div> */}
+      </div>
     </div>
   );
 }
