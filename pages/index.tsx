@@ -14,7 +14,7 @@ import styles from "./Index.module.scss";
 // import App from "../components";
 // import App1 from "../co";
 import MySlider from "../components/SliderPicture/slider";
-import SliderText from "../components/SliderText/sliderText";
+// import SliderText from "../components/SliderText/sliderText";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -275,9 +275,9 @@ export default function Home() {
         <MySlider />
       </div>
       <div style={{ height: "300px" }}></div>
-      <div style={{ height: "300px" }}>
+      {/* <div style={{ height: "300px" }}>
         <SliderText />
-      </div>
+      </div> */}
     </div>
   );
 }
