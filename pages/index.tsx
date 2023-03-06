@@ -5,13 +5,15 @@ import {
   faCartPlus,
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
+
 // import App from "component/Slider1/App";
 // import App1 from "component/Slider2/App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Index.module.scss";
 import App from "../components/Slider1/App";
-import App1 from "../components/Slider2/App";
-import Slider from "../components/slider";
+// import App1 from "../components/Slider2/App";
+import MySlider from "../components/slider";
+import SliderText from "../components/SliderText/sliderText";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -143,9 +145,9 @@ export default function Home() {
         alt=""
       />
 
-      <div className={styles.slider2}>
+      {/* <div className={styles.slider2}>
         <App1 />
-      </div>
+      </div> */}
 
       <div className={styles.product}>
         <div className={styles.button}>
@@ -269,7 +271,11 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.slider}>
-        <Slider />
+        <MySlider />
+      </div>
+      <div style={{ height: "300px" }}></div>
+      <div>
+        <SliderText />
       </div>
     </div>
   );
