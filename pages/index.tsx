@@ -274,7 +274,9 @@ export default function Home() {
       <div className={styles.slider}>
         <MySlider />
       </div>
-      <div style={{ height: "300px" }}></div>
+      <div style={{ height: "300px" }}>
+        <h1>deploy thành công </h1>
+      </div>
       {/* <div style={{ height: "300px" }}>
         <SliderText />
       </div> */}
