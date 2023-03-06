@@ -4,14 +4,15 @@ import Typical from "react-typical";
 function sliderText() {
   return (
     <div>
-      sliderText
-      <div>
+      {/* sliderText */}
+      <p>
+        Tôi là{" "}
         <Typical
-          steps={["Hello", 1000, "Hello, World!", 500]}
           loop={Infinity}
-          wrapper="p"
+          steps={["developer", 1000, "designer", 1000, "Youtube", 1000]}
+          wrapper="b"
         />
-      </div>
+      </p>
     </div>
   );
 }
