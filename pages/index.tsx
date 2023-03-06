@@ -13,9 +13,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Index.module.scss";
 // import App from "../components";
 // import App1 from "../co";
-import Slider from "../components/SliderPicture/slider";
+import MySlider from "../components/SliderPicture/slider";
 import SliderText from "../components/SliderText/sliderText";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -272,7 +272,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.slider}>
-        <Slider />
+        <MySlider />
       </div>
       <div style={{ height: "300px" }}></div>
       <div style={{ height: "300px" }}>
