@@ -1,5 +1,8 @@
 import Image from "next/image";
-// import Slider from "react-slick";
+import Slider from "react-slick";
+// import "swiper/swiper-bundle.min.css";
+// import "./swiper.css";
+
 import { Inter } from "next/font/google";
 import {
   faUser,

@@ -1,0 +1,21 @@
+.navigation {
+  background-color: black;
+}
+.thanh {
+  background-color: red;
+}
+.thanh1 {
+  color: red;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: blue;
+  background-color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+}
+.swiper-button-prev {
+  color: blue;
+}
