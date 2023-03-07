@@ -2,7 +2,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 // import "swiper/swiper-bundle.min.css";
 // import "./swiper.css";
-
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import {
   faUser,
@@ -51,7 +51,12 @@ export default function Home() {
           type="text"
           placeholder="Bạn tìm gì..."
         />
-        <h5>Lịch sử đơn hàng </h5>
+        {/* <h5>Lịch sử đơn hàng </h5> */}
+        <Link href="/history" legacyBehavior>
+          <a>
+            <h5>Lịch sử đơn hàng </h5>
+          </a>
+        </Link>
         <div className={styles.cart}>
           <FontAwesomeIcon
             className={styles.cartIcon2}

@@ -8,4 +8,12 @@
   /* opacity: 0.5; */
   /* color: red; */
   background-color: gray;
+  transform: translateX(-100%);
+}
+.container {
+  display: grid;
+  background-color: red;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
