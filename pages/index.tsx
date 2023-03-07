@@ -8,6 +8,7 @@ import {
   faUser,
   faCartPlus,
   faChevronDown,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import App from "component/Slider1/App";
@@ -33,12 +34,6 @@ export default function Home() {
     //         />
     <div className={styles.main}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <div>
-        <Slider2 />
-      </div>
-      <div>
-        <Slider3 />
-      </div>
 
       {/* <div className={styles.slider}>
 
@@ -49,7 +44,7 @@ export default function Home() {
       <div className={styles.header}>
         <img
           className={styles.logo}
-          src="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-The-Gioi-Di-Dong-MWG.png"
+          src="https://lh6.googleusercontent.com/jQXE325__my6TIcTVtoATgaQ_ZZvp-zHH0izCGQT5Obt-sdDaci5QQetrlo6qWcH8wnoQ2wdiM79uPA3g6ymd9jox-aex1g8OF5Sdk0ky_Q-vBvv81h103m2f7qKOyLOIH8cHjUH"
         />
         <input
           className={styles.input}
@@ -63,15 +58,26 @@ export default function Home() {
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             icon={faCartPlus}
           />
-          <h5>Giỏ hàng </h5>
+          {/* <h5>Giỏ hàng </h5> */}
         </div>
         <p>24H công nghệ </p>
         <p>Hỏi đáp </p>
         <p>Game App </p>
-        <h6>Menu</h6>
+        <div className={styles.menu}>
+          <FontAwesomeIcon
+            className={styles.cartIcon2}
+            style={{ width: "20px", height: "20px", marginRight: "5px" }}
+            icon={faBars}
+          />
+          <h6>Menu</h6>
+        </div>
       </div>
       <div className={styles.input_mobile}>
-        <input style={{ width: "100%" }} type="text" />
+        <input
+          style={{ width: "100%" }}
+          type="text"
+          placeholder="Bạn tìm gì..."
+        />
       </div>
       <div className={styles.nav}>
         <div className={styles.nav_item}>
@@ -147,8 +153,8 @@ export default function Home() {
           </li>
           <li className={styles.menulink__link}>Smartwatch</li>
           <li className={styles.menulink__link}>Đồng hồ</li>
-          <li className={styles.menulink__link}>Máy cũ giá rẻ </li>
-          <li className={styles.menulink__link}>PC, Máy in</li>
+          <li className={styles.menulink__link_pc}>Máy cũ giá rẻ </li>
+          <li className={styles.menulink__link_pc}>PC, Máy in</li>
         </div>
       </div>
 
@@ -247,6 +253,9 @@ export default function Home() {
             <h3>2.190.000đ</h3>
           </div>
         </div>
+        <div className={styles.swiper}>
+          <Slider3 />
+        </div>
         <div className={styles.footer}>
           <div className={styles.footer__item}>
             <p>Tích điểm Quà tặng VIP</p>
@@ -282,6 +291,9 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </div>
+      <div>
+        <Slider2 />
       </div>
       <div className={styles.slider}>
         <MySlider />
