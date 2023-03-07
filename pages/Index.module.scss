@@ -84,7 +84,7 @@ $font-main: 14px;
         visibility: hidden;
         transition: 0.4s linear;
       }
-      @include breakpoint(mobile && phablet && tablet) {
+      @include breakpoint(mobile) {
         .menu_child {
           display: none;
         }

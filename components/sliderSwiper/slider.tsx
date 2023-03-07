@@ -23,7 +23,7 @@ const MySwiper = () => {
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={20}
       slidesPerView={2}
-      navigation
+      // navigation
       pagination={{
         clickable: true,
 
