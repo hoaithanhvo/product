@@ -43,7 +43,7 @@ const MySwiper = () => {
         paddingTop: "50px",
         // "--swiper-button-next": "red",
       }}
-      // scrollbar={{ draggable: true, hide: true }}
+      scrollbar={{ draggable: true, hide: true }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >

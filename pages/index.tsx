@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Slider from "react-slick";
-// import "swiper/swiper-bundle.min.css";
-// import "./swiper.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import {
@@ -11,15 +9,12 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header/Header";
-// import App from "component/Slider1/App";
-// import App1 from "component/Slider2/App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Index.module.scss";
-// import App from "../components";
-// import App1 from "../co";
 import MySlider from "../components/SliderPicture/slider";
 import Slider2 from "../components/SliderText/sliderText";
 import Slider3 from "../components/sliderSwiper/slider";
+import Footer from "../components/Footer/footer";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -36,7 +31,7 @@ export default function Home() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <img
-        style={{ width: "100%", marginBottom: "10px" }}
+        style={{ width: "100%", marginBottom: "50px" }}
         src="	https://cdn.tgdd.vn/2023/02/banner/Banner-Bighero-seasonal-TGDD-1920x450-8.jpg"
         alt=""
       />
@@ -141,7 +136,10 @@ export default function Home() {
       <div style={{ height: "300px" }}>
         <h1>deploy thành công lan2 </h1>
       </div>
-      <div style={{ height: "300px" }}>{/* <SliderText /> */}</div>
+
+      <div style={{ height: "300px" }}>
+        <Footer/>
+      </div>
     </div>
   );
 }
