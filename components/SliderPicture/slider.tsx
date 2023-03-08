@@ -14,13 +14,8 @@ function slider() {
   };
   return (
     <div>
-      slider
-      <h1>võ hoài thanh 132</h1>
       <div>
         <Slider {...settings}>
-          <div className={styles.p1}>
-            <img className={styles.p2} src="http://placekitten.com/g/400/200" />
-          </div>
           <div className={styles.p1}>
             <img className={styles.p2} src="http://placekitten.com/g/400/200" />
           </div>
