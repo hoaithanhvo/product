@@ -2,6 +2,7 @@
   text-align: center;
   margin: 0 auto;
   background-color: white;
+  /* width: 80%; */
 }
 .main:hover {
   cursor: pointer;
@@ -16,4 +17,8 @@
 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
 }
