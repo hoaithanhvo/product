@@ -24,15 +24,15 @@ const MySwiper = () => {
       spaceBetween={5}
       slidesPerView={3}
       // navigation
-      // pagination={{
-      //   clickable: true,
+      pagination={{
+        clickable: true,
 
-      //   renderBullet: function (index, className) {
-      //     return (
-      //       '<span class="' + className + '" style="display:none;"></span>'
-      //     );
-      //   },
-      // }}
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' + className + '" style="display:none;"></span>'
+          );
+        },
+      }}
       // autoplay={{ delay: 1500 }}
       style={{
         "--swiper-navigation-color": "red",
