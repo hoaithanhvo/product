@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import React, { useState, useEffect } from "react";
-// import { renderToString } from "react-dom/server";
 import ReactDOM from "react-dom";
 import Image from "next/image";
 import Header from "../components/Header/Header";
@@ -12,6 +11,7 @@ export default function Home() {
   const [pokemon, setPokemon] = useState<
     { name: string; url: string }[] | null
   >(null);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -24,19 +24,56 @@ export default function Home() {
     fetchData();
   }, []);
 
+  const search_pokemon = () => {
+    let input = document.getElementById("searchbar") as HTMLInputElement;
+    let searchInput = input.value.toLowerCase();
+    console.log(searchInput);
+
+    let x = document.getElementsByClassName(
+      "card"
+    ) as HTMLCollectionOf<HTMLElement>;
+
+    for (let i = 0; i < x.length; i++) {
+      if (!x[i].innerHTML.toLowerCase().includes(searchInput)) {
+        x[i].style.display = "none";
+      } else if (searchInput == null) {
+        console.log("rông");
+        const element = <h1>Hello, world</h1>;
+        ReactDOM.render(element, document.getElementById("root"));
+      } else {
+        x[i].style.display = "list-item";
+      }
+    }
+  };
+
   if (!pokemon) {
     return <div>Loading...</div>;
   }
 
+  const filteredPokemon =
+    searchInput === ""
+      ? pokemon
+      : pokemon.filter((p) => p.name.toLowerCase().includes(searchInput));
+
   return (
     <div className={styles.main}>
+      <div id="root"></div>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className={styles.pokemon}>
         <div>
           <h1>Pokemon List</h1>
+          <div>
+            <input
+              type="text"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              placeholder="Search Pokemon"
+            />
+            <button onClick={search_pokemon}>Search</button>
+          </div>
           <ul className={styles.pokemon_icon}>
-            {pokemon.map((p) => (
-              <li key={p.name} className={styles.pokemon_li}>
+            {filteredPokemon.map((p) => (
+              <li key={p.name} className={`${styles.pokemon_li} card`}>
                 <Image
                   className={styles.image}
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
