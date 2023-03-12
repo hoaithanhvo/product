@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.10",
-    "@types/react-typical": "^0.1.0"
+    "@types/react-typical": "^0.1.0",
+    "jsdom": "^21.1.0"
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
+import { useState } from "react";
 import {
   faUser,
   faCartPlus,
@@ -8,14 +9,16 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
-// import App from "component/Slider1/App";
-// import App1 from "component/Slider2/App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header() {
   const router = useRouter();
+  const [state, setState] = useState(0);
+  // const handle = setState(state + 1);
+
   return (
     <div className={styles.main}>
       <div className={styles.header}>
+        {/* <button></button> */}
         <a onClick={() => router.push("/")}>
           <img
             className={styles.logo}
@@ -28,12 +31,11 @@ function Header() {
           type="text"
           placeholder="Bạn tìm gì..."
         />
-        {/* <h5>Lịch sử đơn hàng </h5> */}
-        <Link href="/history" legacyBehavior>
-          <a>
-            <h5>Lịch sử đơn hàng </h5>
-          </a>
-        </Link>
+
+        <a onClick={() => router.push("/history")}>
+          <h5>Lịch sử đơn hàng </h5>
+        </a>
+
         <div className={styles.cart}>
           <FontAwesomeIcon
             className={styles.cartIcon2}
