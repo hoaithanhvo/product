@@ -37,13 +37,22 @@ $font-main: 14px;
       grid-template-columns: 1fr 1fr 1fr;
     }
     &_li {
-      border: 1px solid red;
+      border: 1px solid blue;
       text-align: center;
       .image {
         display: flex;
-        // justify-content: center;
         margin: 0 auto;
       }
+    }
+    &_li:hover {
+      cursor: pointer;
+      background-color: gray;
+      transform: scale(1, 1.1);
+      transition: 0.2s;
+    }
+    &_input {
+      display: flex;
+      justify-content: center;
     }
   }
   .slider2 {

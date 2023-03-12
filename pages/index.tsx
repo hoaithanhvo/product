@@ -62,7 +62,7 @@ export default function Home() {
       <div className={styles.pokemon}>
         <div>
           <h1>Pokemon List</h1>
-          <div>
+          <div className={styles.pokemon_input}>
             <input
               type="text"
               value={searchInput}
