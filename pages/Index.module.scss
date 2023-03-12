@@ -29,6 +29,24 @@ $font-main: 14px;
   font-family: $font-stack;
   margin: 0 auto;
   max-width: 1200px;
+  .pokemon {
+    // background-color: red;
+    &_icon {
+      display: grid;
+      list-style-type: none;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &_li {
+      border: 1px solid red;
+      text-align: center;
+      .image {
+        display: flex;
+        // justify-content: center;
+        margin: 0 auto;
+      }
+      // display: ;
+    }
+  }
   // background-color: $color_main;
 
   // .header {
