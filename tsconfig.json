@@ -19,6 +19,12 @@
     },
     "isolatedModules": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/login/index.js",
+    "pages/login/index.js"
+  ],
   "exclude": ["node_modules"]
 }

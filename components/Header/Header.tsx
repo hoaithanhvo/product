@@ -42,7 +42,11 @@ function Header() {
           />
           {/* <h5>Giỏ hàng </h5> */}
         </div>
-        <p>24H công nghệ </p>
+        <Link href="/login" legacyBehavior>
+          <a>
+            <h5>Hỏi đáp công nghệ </h5>
+          </a>
+        </Link>
         <p>Hỏi đáp </p>
         <p>Game App </p>
         <div className={styles.menu}>

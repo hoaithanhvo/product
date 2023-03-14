@@ -4,9 +4,8 @@ import { Inter } from "next/font/google";
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Image from "next/image";
-import Header from "../components/Header/Header";
 import styles from "./Index.module.scss";
-
+import SliderPicture from "@/components/SliderPicture/slider";
 export default function Home() {
   const [pokemon, setPokemon] = useState<
     { name: string; url: string }[] | null
@@ -58,6 +57,7 @@ export default function Home() {
   return (
     <div className={styles.main}>
       <div id="root"></div>
+      <SliderPicture />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className={styles.pokemon}>
         <div>
@@ -66,6 +66,7 @@ export default function Home() {
             <input
               type="text"
               value={searchInput}
+              style={{ width: "500px", height: "30px", borderRadius: "10px" }}
               onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Search Pokemon"
             />
@@ -84,6 +85,7 @@ export default function Home() {
                   height={96}
                 />
                 {p.name}
+                <h6>thêm vào giỏ hàng </h6>
               </li>
             ))}
           </ul>

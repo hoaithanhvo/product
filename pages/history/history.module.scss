@@ -1,4 +1,12 @@
-.main {
-  background-color: red;
-  height: 500px;
+.api {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  &_id {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid red;
+  }
 }
