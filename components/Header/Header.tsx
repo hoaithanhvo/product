@@ -8,8 +8,6 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
-// import App from "component/Slider1/App";
-// import App1 from "component/Slider2/App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header() {
   const router = useRouter();
@@ -55,7 +53,11 @@ function Header() {
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             icon={faBars}
           />
-          <h6>Menu</h6>
+          <Link href="/Menu" legacyBehavior>
+            <a>
+              <h5>Menu</h5>
+            </a>
+          </Link>
         </div>
       </div>
       <div className={styles.input_mobile}>

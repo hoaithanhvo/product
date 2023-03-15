@@ -25,6 +25,6 @@
     "**/*.tsx",
     "pages/login/index.js",
     "pages/login/index.js"
-  ],
+, "pages/menu/index.js"  ],
   "exclude": ["node_modules"]
 }

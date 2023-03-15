@@ -3,7 +3,6 @@ import { resolve } from "path";
 import React, { useEffect, useState } from "react";
 
 function Image() {
-  const [imageUrl, setImageUrl] = useState<{ urls: string }[] | null>(null);
   const [urls, setUrls] = useState<{ urls: string }[] | null>(null);
   useEffect(() => {
     const fetchData = () => {
@@ -27,7 +26,7 @@ function Image() {
     };
     const set = setInterval(() => {
       fetchData();
-    }, 5000);
+    }, 1000);
     return () => clearInterval(set);
   }, []);
 
