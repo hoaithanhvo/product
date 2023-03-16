@@ -75,7 +75,13 @@ function Header() {
       </div>
       <div className={styles.nav}>
         <div className={styles.nav_item}>
-          <li className={styles.menulink__link}>Điện thoại</li>
+          <li className={styles.menulink__link}>
+            <Link href="/Phone" legacyBehavior>
+              <a>
+                <p>Điện thoại</p>
+              </a>
+            </Link>
+          </li>
           <li className={styles.menulink__link}>Laptop</li>
           <li className={styles.menulink__link}>Tablet</li>
           <li className={styles.menulink__link}>

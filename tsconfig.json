@@ -24,7 +24,9 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/login/index.js",
-    "pages/login/index.js"
-, "pages/menu/index.js"  ],
+    "pages/login/index.js",
+    "pages/menu/index.js",
+    "pages/Phone/index.tsx"
+  ],
   "exclude": ["node_modules"]
 }
