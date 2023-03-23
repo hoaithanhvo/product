@@ -2,11 +2,26 @@
   width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  &_id {
-    width: 400px;
+  grid-template-columns: 1fr 2fr;
+}
+.item {
+  // margin: 0 15px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px 15px;
+  padding: 5px 10px;
+  .input {
+    border: 1px solid #f96f3a;
     text-align: center;
-    margin: 0 auto;
-    border: 1px solid red;
+    color: #f96f3a;
   }
+  .input:hover {
+    background-color: #f96f3a;
+    cursor: pointer;
+    color: white;
+  }
+}
+.item:hover {
+  background-color: gray;
+  cursor: pointer;
 }

@@ -3,32 +3,32 @@ import { resolve } from "path";
 import React, { useEffect, useState } from "react";
 
 function Image() {
-  const [urls, setUrls] = useState<{ urls: string }[] | null>(null);
-  useEffect(() => {
-    const fetchData = () => {
-      Promise.all([
-        fetch("https://picsum.photos/200/300"),
-        fetch("https://picsum.photos/200/300"),
-        fetch("https://picsum.photos/200/300"),
-      ])
-        .then((responses) =>
-          Promise.all(responses.map((response) => response.url))
-        )
-        .then((urls) =>
-          urls.map((url) => {
-            return {
-              urls: url,
-            };
-          })
-        )
-        .then((urls) => setUrls(urls))
-        .catch((error) => console.log(error));
-    };
-    const set = setInterval(() => {
-      fetchData();
-    }, 1000);
-    return () => clearInterval(set);
-  }, []);
+  // const [urls, setUrls] = useState<{ urls: string }[] | null>(null);
+  // useEffect(() => {
+  //   const fetchData = () => {
+  //     Promise.all([
+  //       fetch("https://picsum.photos/200/300"),
+  //       fetch("https://picsum.photos/200/300"),
+  //       fetch("https://picsum.photos/200/300"),
+  //     ])
+  //       .then((responses) =>
+  //         Promise.all(responses.map((response) => response.url))
+  //       )
+  //       .then((urls) =>
+  //         urls.map((url) => {
+  //           return {
+  //             urls: url,
+  //           };
+  //         })
+  //       )
+  //       .then((urls) => setUrls(urls))
+  //       .catch((error) => console.log(error));
+  //   };
+  //   const set = setInterval(() => {
+  //     fetchData();
+  //   }, 1000);
+  //   return () => clearInterval(set);
+  // }, []);
 
   //   fetch("https://picsum.photos/200/300")
   //     .then((trave) => resolve(trave))
@@ -65,10 +65,11 @@ function Image() {
   //     console.log("gg");
   //   });
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      {urls &&
-        urls.map((url) => <img key={url.urls} src={url.urls} alt="random" />)}
-    </div>
+    // <div style={{ display: "flex", justifyContent: "center" }}>
+    //   {urls &&
+    //     urls.map((url) => <img key={url.urls} src={url.urls} alt="random" />)}
+    // </div>
+    <div></div>
   );
 }
 
