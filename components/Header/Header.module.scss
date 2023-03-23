@@ -50,6 +50,9 @@ $font-stack: Arial, Helvetica, sans-serif;
       opacity: 0.6;
     }
   }
+  .phone {
+    margin-top: 10px;
+  }
   .input_mobile {
     width: 90%;
     margin: 0 auto;
@@ -109,6 +112,11 @@ $font-stack: Arial, Helvetica, sans-serif;
     .menulink__link:hover {
       cursor: pointer;
     }
+  }
+  .phone {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
   }
 }
 

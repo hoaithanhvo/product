@@ -6,60 +6,62 @@ import ReactDOM from "react-dom";
 import Image from "next/image";
 import styles from "./Index.module.scss";
 import SliderPicture from "@/components/SliderPicture/slider";
+import Body from "../components/Body/index";
 export default function Home() {
-  const [pokemon, setPokemon] = useState<
-    { name: string; url: string }[] | null
-  >(null);
-  const [searchInput, setSearchInput] = useState("");
+  // const [pokemon, setPokemon] = useState<
+  //   { name: string; url: string }[] | null
+  // >(null);
+  // const [searchInput, setSearchInput] = useState("");
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
-      const data = await response.json();
-      console.log(data);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+  //     const data = await response.json();
+  //     console.log(data);
 
-      setPokemon(data.results);
-    }
-    fetchData();
-  }, []);
+  //     setPokemon(data.results);
+  //   }
+  //   fetchData();
+  // }, []);
 
-  const search_pokemon = () => {
-    let input = document.getElementById("searchbar") as HTMLInputElement;
-    let searchInput = input.value.toLowerCase();
-    console.log(searchInput);
+  // const search_pokemon = () => {
+  //   let input = document.getElementById("searchbar") as HTMLInputElement;
+  //   let searchInput = input.value.toLowerCase();
+  //   console.log(searchInput);
 
-    let x = document.getElementsByClassName(
-      "card"
-    ) as HTMLCollectionOf<HTMLElement>;
+  //   let x = document.getElementsByClassName(
+  //     "card"
+  //   ) as HTMLCollectionOf<HTMLElement>;
 
-    for (let i = 0; i < x.length; i++) {
-      if (!x[i].innerHTML.toLowerCase().includes(searchInput)) {
-        x[i].style.display = "none";
-      } else if (searchInput == null) {
-        console.log("rông");
-        const element = <h1>Hello, world</h1>;
-        ReactDOM.render(element, document.getElementById("root"));
-      } else {
-        x[i].style.display = "list-item";
-      }
-    }
-  };
+  //   for (let i = 0; i < x.length; i++) {
+  //     if (!x[i].innerHTML.toLowerCase().includes(searchInput)) {
+  //       x[i].style.display = "none";
+  //     } else if (searchInput == null) {
+  //       console.log("rông");
+  //       const element = <h1>Hello, world</h1>;
+  //       ReactDOM.render(element, document.getElementById("root"));
+  //     } else {
+  //       x[i].style.display = "list-item";
+  //     }
+  //   }
+  // };
 
-  if (!pokemon) {
-    return <div>Loading...</div>;
-  }
+  // if (!pokemon) {
+  //   return <div>Loading...</div>;
+  // }
 
-  const filteredPokemon =
-    searchInput === ""
-      ? pokemon
-      : pokemon.filter((p) => p.name.toLowerCase().includes(searchInput));
+  // const filteredPokemon =
+  //   searchInput === ""
+  //     ? pokemon
+  //     : pokemon.filter((p) => p.name.toLowerCase().includes(searchInput));
 
   return (
     <div className={styles.main}>
       <div id="root"></div>
       <SliderPicture />
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <div className={styles.pokemon}>
+      {/* <div className={styles.pokemon}>
         <div>
           <h1>Pokemon List</h1>
           <div className={styles.pokemon_input}>
@@ -90,7 +92,8 @@ export default function Home() {
             ))}
           </ul>
         </div>
-      </div>
+      </div> */}
+      <Body />
     </div>
   );
 }

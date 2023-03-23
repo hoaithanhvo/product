@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
+import { useState } from "react";
 import {
   faUser,
   faCartPlus,
@@ -9,7 +10,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const array = [
+  { title: "Điện thoại", link: "/dien-thoai" },
+  { title: "Laptop", link: "/laptop" },
+  { title: "Tablet", link: "/tablet" },
+  { title: "Phụ Kiện", link: "/phu-kien" },
+  { title: "SmartWatch", link: "/smartwatch" },
+  { title: "Đồng hồ", link: "/dong-ho" },
+];
 function Header() {
+  const [post, setPost] = useState<{ id: string }[] | null>(null);
+  const [style, setStyle] = useState("");
   const router = useRouter();
   return (
     <div className={styles.main}>
@@ -21,11 +33,11 @@ function Header() {
           />
         </a>
 
-        <input
+        {/* <input
           className={styles.input}
           type="text"
           placeholder="Bạn tìm gì..."
-        />
+        /> */}
         {/* <h5>Lịch sử đơn hàng </h5> */}
         <Link href="/history" legacyBehavior>
           <a>
@@ -38,23 +50,23 @@ function Header() {
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             icon={faCartPlus}
           />
-          {/* <h5>Giỏ hàng </h5> */}
+          <h5>Giỏ hàng </h5>
         </div>
         <Link href="/login" legacyBehavior>
           <a>
-            <h5>Hỏi đáp công nghệ </h5>
+            <h5>Giỏ hàng</h5>
           </a>
         </Link>
         <p>Hỏi đáp </p>
         <p>Game App </p>
         <div className={styles.menu}>
-          <FontAwesomeIcon
-            className={styles.cartIcon2}
-            style={{ width: "20px", height: "20px", marginRight: "5px" }}
-            icon={faBars}
-          />
           <Link href="/Menu" legacyBehavior>
             <a>
+              <FontAwesomeIcon
+                className={styles.cartIcon2}
+                style={{ width: "20px", height: "20px", marginRight: "5px" }}
+                icon={faBars}
+              />
               <h5>Menu</h5>
             </a>
           </Link>
@@ -70,10 +82,10 @@ function Header() {
             borderLeft: "white",
           }}
           type="text"
-          placeholder="Bạn tìm gì..."
+          placeholder="   Bạn tìm gì..."
         />
       </div>
-      <div className={styles.nav}>
+      {/* <div className={styles.nav}>
         <div className={styles.nav_item}>
           <li className={styles.menulink__link}>
             <Link href="/Phone" legacyBehavior>
@@ -156,6 +168,28 @@ function Header() {
           <li className={styles.menulink__link_pc}>Máy cũ giá rẻ </li>
           <li className={styles.menulink__link_pc}>PC, Máy in</li>
         </div>
+      </div> */}
+      <div className={styles.phone}>
+        {array.map((p) => (
+          <div>
+            <Link href={p.link}>
+              <p
+                className={styles.main}
+                onClick={() => setStyle(p.title)}
+                style={
+                  style === p.title
+                    ? {
+                        // backgroundColor: "red",
+                        color: "white",
+                      }
+                    : {}
+                }
+              >
+                {p.title}
+              </p>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+.main {
+  //   display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.item:hover {
+  background-color: gray;
+  cursor: pointer;
+}

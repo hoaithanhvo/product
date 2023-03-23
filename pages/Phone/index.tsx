@@ -1,39 +1,43 @@
+import { type } from "os";
+import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
-const tabs = ["posts", "comments", "albums"];
-
+import styles from "./index.module.scss";
+const array = [
+  { title: "Điện thoại", link: "/dien-thoai" },
+  { title: "Laptop", link: "/laptop" },
+  { title: "Tablet", link: "/tablet" },
+  { title: "Phụ Kiện", link: "/phu-kien" },
+  { title: "SmartWatch", link: "/smartwatch" },
+  { title: "Đồng hồ", link: "/dong-ho" },
+];
 function index() {
-  const [posts, setPost] = useState<
-    { id: number; url: string; title: string }[] | null
-  >(null);
-  const [type, setType] = useState("posts");
-
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/${type}`)
-      .then((res) => res.json())
-      .then((posts) => {
-        setPost(posts);
-      });
-  }, [type]);
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-  });
+  const [post, setPost] = useState<{ id: string }[] | null>(null);
+  const [style, setStyle] = useState("post");
 
   return (
     <div>
-      {tabs.map((tab) => (
-        <button
-          key={tab}
-          onClick={() => setType(tab)}
-          style={type === tab ? { color: "#fff", background: "red" } : {}}
-        >
-          {tab}
-        </button>
-      ))}
-      <ul>{posts && posts.map((post) => <li>{post.title || post.id}</li>)}</ul>
+      <div className={styles.phone}>
+        {array.map((p) => (
+          <div>
+            <Link href={p.link}>
+              <p
+                className={styles.main}
+                onClick={() => setStyle(p.title)}
+                style={
+                  style === p.title
+                    ? {
+                        backgroundColor: "red",
+                      }
+                    : {}
+                }
+              >
+                {p.title}
+              </p>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
