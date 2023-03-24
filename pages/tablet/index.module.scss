@@ -5,3 +5,7 @@
   margin-top: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.item:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
