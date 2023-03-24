@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
-function index() {
+import { useState } from "react";
+export default function index() {
   return (
     <div>
       <div className={styles.main}>
@@ -155,5 +156,3 @@ function index() {
     </div>
   );
 }
-
-export default index;
