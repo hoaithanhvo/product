@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import { useState } from "react";
+import Body from "../Body/index";
+import Input from "../Input/input";
 import {
   faUser,
   faCartPlus,
@@ -20,7 +22,6 @@ const array = [
   { title: "Đồng hồ", link: "/dong-ho" },
 ];
 function Header() {
-  const [post, setPost] = useState<{ id: string }[] | null>(null);
   const [style, setStyle] = useState("");
   const router = useRouter();
   return (
@@ -38,7 +39,9 @@ function Header() {
           type="text"
           placeholder="Bạn tìm gì..."
         />
-        {/* <h5>Lịch sử đơn hàng </h5> */}
+        {/* <input value={inputValue} onChange={handleInputChange} />
+        <Body inputValue={inputValue} /> */}
+
         <Link href="/history" legacyBehavior>
           <a
             style={{
