@@ -1,7 +1,6 @@
 import React from "react";
+const LoginPage = () => {
+  return <div>dongho</div>;
+};
 
-function index() {
-  return <div>index</div>;
-}
-
-export default index;
+export default LoginPage;

@@ -26,7 +26,11 @@
     "pages/login/index.js",
     "pages/login/index.js",
     "pages/menu/index.js",
-    "pages/Phone/index.tsx"
+    "pages/Phone/index.tsx",
+    "components/Body/index.js",
+    "components/Body/ChildComponent.js",
+    "pages/dong-ho/index.tsx",
+    "components/index.js"
   ],
   "exclude": ["node_modules"]
 }

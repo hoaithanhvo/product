@@ -1,3 +1,28 @@
+$color_main: #f5ce00;
+$color_item: rgba(255, 172, 10, 0.6);
+$color_backgound: #fe9801;
+$font-main: 14px;
+$font-stack: Arial, Helvetica, sans-serif;
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (min-width: 320px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == pc {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
 .main {
   //   display: flex;
   display: grid;
@@ -7,14 +32,24 @@
   list-style-type: none;
   font-size: 20px;
   margin: 0 auto;
-  background-color: white;
+  background-color: $color_backgound;
   .center {
     margin: 0 auto;
     justify-content: center;
     text-align: center;
+    height: 300px;
+    max-width: 200px;
+    margin-bottom: 15px;
+    background-color: white;
+    transition: transform 0.3s ease-out;
+    .img {
+      margin-top: 20px;
+    }
   }
   .center:hover {
     cursor: pointer;
+    // background-color: #fe9801;
+    transform: translateY(-10px);
     .img {
       transition: 0.5s all ease;
       transform: scale3d(0.7);
@@ -26,4 +61,23 @@
 .item:hover {
   background-color: gray;
   cursor: pointer;
+}
+.input {
+  margin: 0 auto;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+@include breakpoint(mobile) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: $font-main;
+    // width: 500px;
+    .center {
+      // width: 50px;
+      font-size: 12px;
+    }
+  }
 }

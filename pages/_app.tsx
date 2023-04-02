@@ -7,8 +7,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
+      {/* <input /> */}
+
       <Component {...pageProps} />
       <Footer />
+
       {/* <Slider /> */}
     </>
   );

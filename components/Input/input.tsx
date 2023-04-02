@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import ChildComponent from "../Body/ChildComponent";
 
-function input(props: any) {
-  const [inputValue, setInputValue] = useState("");
-
-  function handleInputChange(event: any) {
-    setInputValue(event.target.value);
-  }
-
+function ParentComponent() {
   return (
     <div>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
-      <p>{inputValue}</p>
+      <ChildComponent name="John3" />
     </div>
   );
 }
 
-export default input;
+export default ParentComponent;
