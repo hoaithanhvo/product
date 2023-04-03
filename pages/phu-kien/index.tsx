@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./index.module.scss";
+import Body from "../../components/Body/ChildComponent";
 function index() {
   return (
     <div className={styles.container}>
@@ -68,6 +69,7 @@ function index() {
             alt=""
           />
           <p>Sạc dự phòng</p>
+          {/* <Body title="đă" /> */}
         </div>
       </div>
     </div>

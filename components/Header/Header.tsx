@@ -15,7 +15,7 @@ const array = [
   { title: "Đồng hồ", link: "/dong-ho" },
 ];
 function Header(props: any) {
-  console.log(props.name);
+  // console.log(props.name);
 
   const [style, setStyle] = useState("");
   const router = useRouter();

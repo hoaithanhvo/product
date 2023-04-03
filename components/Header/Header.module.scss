@@ -69,6 +69,7 @@ $font-stack: Arial, Helvetica, sans-serif;
   }
   .phone {
     margin-top: 10px;
+    padding-bottom: 10px;
   }
   .input_mobile {
     width: 90%;
@@ -135,6 +136,12 @@ $font-stack: Arial, Helvetica, sans-serif;
     font-size: $font-main;
     justify-content: space-around;
     flex-direction: row;
+    font-size: $font-main;
+  }
+  @include breakpoint(mobile) {
+    .phone {
+      font-size: 12px;
+    }
   }
 }
 
@@ -185,4 +192,7 @@ $font-stack: Arial, Helvetica, sans-serif;
       margin-right: 5px;
     }
   }
+}
+.phone {
+  font-size: 12px;
 }

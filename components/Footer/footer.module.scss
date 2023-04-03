@@ -3,7 +3,7 @@ $color_item: rgba(255, 172, 10, 0.6);
 $font-main: 14px;
 
 .footer {
-  margin-top: -15px;
+  margin-top: 15px;
   max-width: 1200px;
   display: flex;
   margin: 0 auto;
@@ -13,6 +13,9 @@ $font-main: 14px;
   background-color: $color_main;
 
   & {
+    p {
+      margin-top: 15px;
+    }
     p:hover {
       cursor: pointer;
       color: #f8f8f8;

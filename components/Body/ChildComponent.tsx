@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import styles from "./index.module.scss";
-import Header from "../Header/Header";
 import Input from "../Input/input";
 interface IProps {
   article: {
@@ -12,6 +11,7 @@ interface IProps {
 }
 export default function ProductList(props: any) {
   const [searchTerm, setSearchTerm] = useState("");
+  console.log(props);
 
   const products = [
     {
@@ -79,6 +79,13 @@ export default function ProductList(props: any) {
     <div className={styles.container}>
       <div>
         {/* <h1>{props.name}</h1> */}
+        <div className={styles.banner}>
+          <img
+            width={"100%"}
+            src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2023/03/banner/Banner-BIG-TGDD-1920x450.jpg"
+            alt=""
+          />
+        </div>
         <input
           className={styles.input}
           type="text"
@@ -88,23 +95,25 @@ export default function ProductList(props: any) {
         />
       </div>
 
-      <div className={styles.main}>
-        {filteredProducts.map((product, index) => (
-          <li className={styles.center} key={index}>
-            {product.img && (
-              <img
-                className={styles.img}
-                width={150}
-                height={150}
-                src={product.img}
-                alt={product.name}
-              />
-            )}
-            <p>{product.name}</p>
-            <p>{product.title}</p>
-            <p>{product.price}</p>
-          </li>
-        ))}
+      <div>
+        <div className={styles.main}>
+          {filteredProducts.map((product, index) => (
+            <li className={styles.center} key={index}>
+              {product.img && (
+                <img
+                  className={styles.img}
+                  width={150}
+                  height={150}
+                  src={product.img}
+                  alt={product.name}
+                />
+              )}
+              <p className={styles.text}>{product.name}</p>
+              <p className={styles.text}>{product.title}</p>
+              <p className={styles.text}>{product.price}</p>
+            </li>
+          ))}
+        </div>
       </div>
     </div>
   );
